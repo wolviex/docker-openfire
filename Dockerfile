@@ -28,8 +28,7 @@ RUN chmod +x /etc/service/mysqld/run
 # to add openfire deamon to runit
 RUN mkdir /etc/service/openfire
 COPY openfire.sh /etc/service/openfire/run
-COPY unopenfire.sh /etc/service/openfire/finish
-RUN chmod +x /etc/service/openfire/run /etc/service/openfire/finish
+RUN chmod +x /etc/service/openfire/run 
 
 #pre-config scritp for different service that need to be run when container image is create 
 #maybe include additional software that need to be installed ... with some service running ... like example mysqld
@@ -46,7 +45,7 @@ VOLUME /var/backups
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
-EXPOSE 9090 9091 5222 5269
+EXPOSE 9090 9091 5222 5269 5223
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
