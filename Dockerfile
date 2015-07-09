@@ -25,6 +25,12 @@ RUN mkdir /etc/service/mysqld
 COPY mysqld.sh /etc/service/mysqld/run
 RUN chmod +x /etc/service/mysqld/run
 
+# to add openfire deamon to runit
+RUN mkdir /etc/service/openfire
+COPY openfire.sh /etc/service/openfire/run
+COPY unopenfire.sh /etc/service/openfire/finish
+RUN chmod +x /etc/service/openfire/run /etc/service/openfire/finish
+
 #pre-config scritp for different service that need to be run when container image is create 
 #maybe include additional software that need to be installed ... with some service running ... like example mysqld
 COPY pre-conf.sh /sbin/pre-conf
