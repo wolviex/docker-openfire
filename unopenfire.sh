@@ -28,6 +28,5 @@ DAEMON_OPTS="$DAEMON_OPTS -server -DopenfireHome=${DAEMON_DIR} \
  -jar ${DAEMON_LIB}/startup.jar"
 
 
-exec start-stop-daemon --start --quiet --background --make-pidfile \
-                --pidfile /var/run/$NAME.pid --chuid openfire:openfire \
-                --exec $JAVA -- $DAEMON_OPTS
+exec start-stop-daemon --stop --quiet --pidfile /var/run/$NAME.pid \
+                --exec $JAVA --retry 4
