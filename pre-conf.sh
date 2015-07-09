@@ -10,7 +10,7 @@
 echo "GRANT ALL ON openfire.* TO openfireuser@localhost IDENTIFIED BY 'openfiredbpasswd'; flush privileges; " | mysql -u root -pmysqlpsswd
 
 wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_3.10.2_all.deb
-mv downloadServlet?filename=openfire/openfire_3.10.2_all.deb openfire_3.10.2_all.deb
+mv downloadServlet?filename=openfire%2Fopenfire_3.10.2_all.deb openfire_3.10.2_all.deb
 dpkg -i openfire_3.10.2_all.deb
 
  #to clear some data before saving this layer ...a docker image
