@@ -3,10 +3,12 @@
 # `/sbin/setuser openfire` runs the given command as the user `openfire`.
 # If you omit that part, the command will be run as root.
 
+#check this file
 if [ -f /etc/default/openfire ] ; then
         . /etc/default/openfire
 fi
 
+#/usr/
 if [ -z $JAVA_HOME ]; then
  JAVA_HOME=$(LC_ALL=C update-alternatives --display java \
     | grep best \
@@ -28,6 +30,6 @@ DAEMON_OPTS="$DAEMON_OPTS -server -DopenfireHome=${DAEMON_DIR} \
  -jar ${DAEMON_LIB}/startup.jar"
 
 
-exec start-stop-daemon --start --quiet --background --make-pidfile \
+#exec start-stop-daemon --start --quiet --background --make-pidfile \
                 --pidfile /var/run/$NAME.pid --chuid openfire:openfire \
                 --exec $JAVA -- $DAEMON_OPTS
