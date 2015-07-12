@@ -1,5 +1,4 @@
 # docker-openfire
-This container still not ready 
 
 Docker container for [openfire][3]
 
