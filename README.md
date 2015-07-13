@@ -48,5 +48,5 @@ Example of this [docker-openfire][6]
 [3]:http://www.igniterealtime.org/downloads/index.jsp
 [4]:http://docs.docker.com
 [5]:https://github.com/QuantumObject/docker-openfire
-[6]:https://www.quantumobject.com:9090
+[6]:http://www.quantumobject.com:9090
 
