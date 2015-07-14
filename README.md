@@ -1,6 +1,6 @@
 # docker-openfire
 
-Docker container for [openfire][3]
+Docker container for [openfire][3] with [starkweb client][7] include.
 
 "Openfire is a real time collaboration (RTC) server licensed under the Open Source Apache License. It uses the only widely adopted open protocol for instant messaging, XMPP (also called Jabber). Openfire is incredibly easy to setup and administer, but offers rock-solid security and performance."
 
@@ -28,7 +28,11 @@ After that check with your browser at addresses plus the port assigined by docke
 
   - **http://host_ip:9090/**
 
-where MySQL user will be openfireuser with password openfiredbpasswd for database openfire at localhost.
+where MySQL user will be openfireuser with password openfiredbpasswd for database openfire at localhost Then need to add email and password for admin account.
+
+When done configuring OpenFire and adding some users you can use the internal web client :
+
+  - ** http://host_ip:9090/sparkweb/
 
 To access the container from the server that the container is running :
 
@@ -49,4 +53,4 @@ Example of this [docker-openfire][6]
 [4]:http://docs.docker.com
 [5]:https://github.com/QuantumObject/docker-openfire
 [6]:http://www.quantumobject.com:9090
-
+[7]:http://www.igniterealtime.org/projects/sparkweb/index.jsp
