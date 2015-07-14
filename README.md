@@ -32,7 +32,7 @@ where MySQL user will be openfireuser with password openfiredbpasswd for databas
 
 When done configuring OpenFire and adding some users you can use the internal web client :
 
-  - ** http://host_ip:9090/sparkweb/
+  - ** http://host_ip:9090/sparkweb/ **
 
 To access the container from the server that the container is running :
 
