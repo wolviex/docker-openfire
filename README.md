@@ -38,6 +38,7 @@ To access the container from the server that the container is running :
 
     $ docker exec -it container_id /bin/bash
 
+note:  -p 5275:5275 -p 10000-12500:10000-12500  this only needed if you going to used plugins for  Openfire Meetings.
 
 ## More Info
 
