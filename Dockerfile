@@ -45,7 +45,7 @@ VOLUME /var/backups
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
-EXPOSE 3478 3479 5222 5223 5229 5269 7070 7443 7777 9090 9091 10000-12500/udp
+EXPOSE 3478 3479 5222 5223 5229 5269 7070 7443 7777 9090 9091 5275 10000-12500/udp
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
