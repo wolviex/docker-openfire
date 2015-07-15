@@ -20,7 +20,7 @@ To install docker in Ubuntu 14.04 use the commands:
 
 To run container use the command below:
 
-    $ docker run -d -p 9090:9090 -p 9091:9091  -p 5222:5222 -p 5269:5269 -p 5223:5223 -p 7443:7443 -p 5275:5275 -p 10000-12500:10000-12500 quantumobject/docker-openfire
+    $ docker run -d -p 9090:9090 -p 9091:9091  -p 5222:5222 -p 5269:5269 -p 5223:5223 -p 7443:7443 -p 5275:5275 -p 10000-12500:10000-12500/udp quantumobject/docker-openfire
 
 ## Accessing the openfire applications:
 
@@ -38,7 +38,7 @@ To access the container from the server that the container is running :
 
     $ docker exec -it container_id /bin/bash
 
-note:  -p 5275:5275 -p 10000-12500:10000-12500  this only needed if you going to used plugins for  Openfire Meetings.
+note:  -p 5275:5275 -p 10000-12500:10000-12500/udp  this only needed if you going to used plugins for  Openfire Meetings.
 
 ## More Info
 
