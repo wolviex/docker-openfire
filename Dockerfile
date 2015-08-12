@@ -1,5 +1,5 @@
 #name of container: docker-openfire
-#versison of container: 0.1.0
+#versison of container: 0.1.1
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
