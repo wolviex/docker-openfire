@@ -22,6 +22,11 @@ To run container use the command below:
 
     $ docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 \
     -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 \
+    quantumobject/docker-openfire
+
+ or to be able to used with plugins for Jitsi Meet :
+ 
+    $ docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 \
     -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp \
     quantumobject/docker-openfire
 
@@ -41,7 +46,7 @@ To access the container from the server that the container is running :
 
     $ docker exec -it container_id /bin/bash
 
-note:  -p 5275:5275 -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp  this only needed if you going to used plugins for  Openfire Meetings.
+note: -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp  this only needed if you going to used plugins for  Openfire Meetings.
 
 ## More Info
 
