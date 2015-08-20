@@ -30,13 +30,28 @@ To run container use the command below:
     -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp \
     quantumobject/docker-openfire
 
+## If you need a MySQL database you can link container :
+
+    $ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword  -e MYSQL_DATABASE=openfire \
+    -e MYSQL_USER=openfireuser -e MYSQL_PASSWORD=openfirepasswd -d mysql
+
+in case you want to used pre-existing mysql container , you can add the new database by connecting to it with _docker exec -it some-mysql bash_ and manual adding openfire database or you can link and used quantumobject/docker-mywebsql to create database openfire and user openfireuser plus need to grant all permision of this user to the database.  
+  
+Them link to Owncloud container
+
+    $ docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 \
+    -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp \
+    --link some-mysql:db quantumobject/docker-openfire 
+
+where when been ask for database need to replace localhost for db.
+
 ## Accessing the openfire applications:
 
 After that check with your browser at addresses plus the port assigined by docker or you:
 
   - **http://host_ip:9090/**
 
-where MySQL user will be openfireuser with password openfiredbpasswd for database openfire at localhost Then need to add email and password for admin account.
+where MySQL user will be openfireuser with password for the database openfire at db , then need to add email and password for admin account.
 
 When done configuring OpenFire and adding some users you can use the internal web client :
 
