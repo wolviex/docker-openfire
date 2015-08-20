@@ -18,18 +18,6 @@ To install docker in Ubuntu 14.04 use the commands:
 
 ## Usage
 
-To run container use the command below:
-
-    $ docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 \
-    -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 \
-    quantumobject/docker-openfire
-
- or to be able to used with plugins for Jitsi Meet :
- 
-    $ docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 \
-    -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp \
-    quantumobject/docker-openfire
-
 ## If you need a MySQL database you can link container :
 
     $ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword  -e MYSQL_DATABASE=openfire \
@@ -37,7 +25,13 @@ To run container use the command below:
 
 in case you want to used pre-existing mysql container , you can add the new database by connecting to it with _docker exec -it some-mysql bash_ and manual adding openfire database or you can link and used quantumobject/docker-mywebsql to create database openfire and user openfireuser plus need to grant all permision of this user to the database.  
   
-Them link to Owncloud container
+Them link and run the  openfire container:
+
+    $ docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 \
+    -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 \
+    --link some-mysql:db quantumobject/docker-openfire
+
+ or to be able to used with plugins for Jitsi Meet :
 
     $ docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 \
     -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp \
