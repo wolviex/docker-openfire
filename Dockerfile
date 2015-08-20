@@ -1,12 +1,11 @@
 #name of container: docker-openfire
-#versison of container: 0.1.1
-FROM quantumobject/docker-baseimage
+#versison of container: 0.1.2
+FROM angelrr7702/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
 RUN apt-get update && apt-get install -y -q openjdk-7-jre \
-                    mysql-server \
                     && apt-get clean \
                     && apt-get autoremove \
                     && rm -rf /tmp/* /var/tmp/*  \
@@ -20,11 +19,6 @@ COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
 ##Adding Deamons to containers
-# to add mysqld deamon to runit
-RUN mkdir /etc/service/mysqld
-COPY mysqld.sh /etc/service/mysqld/run
-RUN chmod +x /etc/service/mysqld/run
-
 # to add openfire deamon to runit
 RUN mkdir /etc/service/openfire
 COPY openfire.sh /etc/service/openfire/run
