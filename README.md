@@ -23,7 +23,7 @@ To install docker in Ubuntu 14.04 use the commands:
     $ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword  -e MYSQL_DATABASE=openfire \
     -e MYSQL_USER=openfireuser -e MYSQL_PASSWORD=openfirepasswd -d mysql
 
-in case you want to used pre-existing mysql container , you can add the new database by connecting to it with _docker exec -it some-mysql bash_ and manual adding openfire database or you can link and used quantumobject/docker-mywebsql to create database openfire and user openfireuser plus need to grant all permision of this user to the database.  
+in case you want to used pre-existing mysql container , you can add the new database by connecting to it with _docker exec -it some-mysql bash_ and manual adding openfire database or you can link and used quantumobject/docker-mywebsql to create database openfire with user openfireuser plus need to grant all permision of this user to the database.  
   
 Them link and run the  openfire container:
 
