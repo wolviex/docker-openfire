@@ -18,7 +18,7 @@ To install docker in Ubuntu 14.04 use the commands:
 
 ## Usage
 
-## If you need a MySQL database you can link container :
+If you need a MySQL database you can link container :
 
     $ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword  -e MYSQL_DATABASE=openfire \
     -e MYSQL_USER=openfireuser -e MYSQL_PASSWORD=openfirepasswd -d mysql
