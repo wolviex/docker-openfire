@@ -65,6 +65,8 @@ To help improve this container [docker-openfire][5]
 
 Example of this [docker-openfire][6]
 
+For additional info about us and our projects check our site [www.quantumobject.com][8]
+
 [1]:http://www.igniterealtime.org/projects/openfire/index.jsp
 [2]:https://www.docker.com
 [3]:http://www.igniterealtime.org/downloads/index.jsp
@@ -72,3 +74,4 @@ Example of this [docker-openfire][6]
 [5]:https://github.com/QuantumObject/docker-openfire
 [6]:http://www.quantumobject.com:9090
 [7]:http://www.igniterealtime.org/projects/sparkweb/index.jsp
+[8]:http://www.quantumobject.com/
