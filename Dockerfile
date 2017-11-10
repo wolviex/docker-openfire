@@ -1,11 +1,11 @@
 #name of container: docker-openfire
-#versison of container: 0.2.3
-FROM quantumobject/docker-baseimage:15.10
+#versison of container: 0.3.1
+FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q openjdk-7-jre default-jre-headless \
+RUN apt-get update && apt-get install -y -q openjdk-8-jre default-jre-headless \
                     && apt-get clean \
                     && apt-get autoremove \
                     && rm -rf /tmp/* /var/tmp/*  \
@@ -27,7 +27,7 @@ RUN chmod +x /etc/service/openfire/run
 #pre-config scritp for different service that need to be run when container image is create 
 #maybe include additional software that need to be installed ... with some service running ... like example mysqld
 COPY pre-conf.sh /sbin/pre-conf
-RUN chmod +x /sbin/pre-conf \
+RUN chmod +x /sbin/pre-conf; sync \
     && /bin/bash -c /sbin/pre-conf \
     && rm /sbin/pre-conf
 

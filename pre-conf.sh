@@ -1,10 +1,11 @@
 #!/bin/bash
+set -e
 
 #installing openfire
-wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.0.3_all.deb
-mv downloadServlet?filename=openfire%2Fopenfire_4.0.3_all.deb openfire_4.0.3_all.deb
-dpkg -i openfire_4.0.3_all.deb
-rm openfire_4.0.3_all.deb
+wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.6_all.deb
+mv downloadServlet?filename=openfire%2Fopenfire_4.1.6_all.deb openfire_4.1.6_all.deb
+dpkg -i openfire_4.1.6_all.deb
+rm openfire_4.1.6_all.deb
 
 #installing sparkweb
 wget http://www.igniterealtime.org/downloadServlet?filename=sparkweb/sparkweb_0_9_0.tar.gz
