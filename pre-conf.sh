@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 #installing openfire
 wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.1.6_all.deb
