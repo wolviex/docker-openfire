@@ -1,11 +1,11 @@
 #name of container: docker-openfire
-#versison of container: 0.3.1
-FROM quantumobject/docker-baseimage:16.04
+#versison of container: 0.3.2
+FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q openjdk-8-jre default-jre-headless \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q openjdk-9-jre default-jre-headless \
                     && apt-get clean \
                     && apt-get autoremove \
                     && rm -rf /tmp/* /var/tmp/*  \
