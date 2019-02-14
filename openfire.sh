@@ -17,7 +17,7 @@ DAEMON_DIR=/usr/share/openfire
 DAEMON_LIB=${DAEMON_DIR}/lib
 
 DAEMON_OPTS="-server -DopenfireHome=${DAEMON_DIR} \
- -Dopenfire.lib.dir=${DAEMON_LIB} -classpath ${DAEMON_LIB}/startup.jar\
+ -Dopenfire.lib.dir=${DAEMON_LIB} -Dlog4j.configurationFile=${DAEMON_LIB}/log4j2.xml -classpath ${DAEMON_LIB}/startup.jar\
  -jar ${DAEMON_LIB}/startup.jar"
 
 
