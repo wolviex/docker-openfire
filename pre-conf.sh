@@ -2,14 +2,12 @@
 set -e
 
 #installing openfire
-wget http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.2.3_all.deb
-mv downloadServlet?filename=openfire%2Fopenfire_4.2.3_all.deb openfire_4.2.3_all.deb
-dpkg -i openfire_4.2.3_all.deb
-rm openfire_4.2.3_all.deb
+wget -O openfire_4.3.2_all.deb http://www.igniterealtime.org/downloadServlet?filename=openfire/openfire_4.3.2_all.deb
+dpkg -i openfire_4.3.2_all.deb
+rm openfire_4.3.2_all.deb
 
 #installing sparkweb
-wget http://www.igniterealtime.org/downloadServlet?filename=sparkweb/sparkweb_0_9_0.tar.gz
-mv downloadServlet?filename=sparkweb%2Fsparkweb_0_9_0.tar.gz sparkweb_0_9_0.tar.gz
+wget -O sparkweb_0_9_0.tar.gz http://www.igniterealtime.org/downloadServlet?filename=sparkweb/sparkweb_0_9_0.tar.gz
 tar -xvf sparkweb_0_9_0.tar.gz
 rm sparkweb_0_9_0.tar.gz
 mv sparkweb /usr/share/openfire/plugins/admin/webapp/
