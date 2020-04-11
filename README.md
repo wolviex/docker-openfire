@@ -28,9 +28,9 @@ Them link and run the  openfire container:
 
     docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 --link openfire-mysql:db --name openfire quantumobject/docker-openfire
 
- or to be able to used with plugins for Jitsi Meet :
+ or to be able to used with plugins for Openfire Meetings :
 
-    docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp --link openfire-mysql:db --name openfire quantumobject/docker-openfire 
+    docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5000-6000:5000-6000/tcp/udp --link openfire-mysql:db --name openfire quantumobject/docker-openfire 
 
 where when been ask for database need to replace localhost for db.
 
