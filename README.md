@@ -48,7 +48,7 @@ When done configuring OpenFire and adding some users you can use the internal we
 
 To access the container from the server that the container is running :
 
-    $ docker exec -it container_id /bin/bash
+    docker exec -it container_id /bin/bash
 
 note: -p 5000-6000:5000-6000/tcp -p 5000-6000:5000-6000/udp  this only needed if you going to used plugins for  Openfire Meetings.
 
