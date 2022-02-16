@@ -4,6 +4,8 @@ Docker container for [openfire][3] with [starkweb client][7] include.
 
 "Openfire is a real time collaboration (RTC) server licensed under the Open Source Apache License. It uses the only widely adopted open protocol for instant messaging, XMPP (also called Jabber). Openfire is incredibly easy to setup and administer, but offers rock-solid security and performance."
 
+New releases on this branch are being pushed to:
+https://hub.docker.com/repository/docker/wolviex/openfire
 
 ## Install dependencies
 
@@ -24,13 +26,13 @@ If you need a MySQL database you can link container :
 
 in case you want to used pre-existing mysql container , you can add the new database by connecting to it with _docker exec -it some-mysql bash_ and manual adding openfire database or you can link and used quantumobject/docker-mywebsql to create database openfire with user openfireuser plus need to grant all permision of this user to the database.  
   
-Them link and run the  openfire container:
+Them link and run the  openfire container: (updated to wolviex for latest)
 
-    docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 --link openfire-mysql:db --name openfire quantumobject/docker-openfire
+    docker run -d -p 9090:9090 -p 5222:5222 -p 5269:5269 -p 5223:5223 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5229:5229 -p 5275:5275 --link openfire-mysql:db --name openfire wolviex/openfire:latest
 
- or to be able to used with plugins for Openfire Meetings :
+ or to be able to used with plugins for Openfire Meetings : (updated to wolviex for latest)
 
-    docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5000-6000:5000-6000/tcp/udp --link openfire-mysql:db --name openfire quantumobject/docker-openfire 
+    docker run -d -p 9090:9090 -p 7443:7443 -p 7777:7777 -p 7070:7070 -p 5000-6000:5000-6000/tcp/udp --link openfire-mysql:db --name openfire wolviex/openfire:latest 
 
 where when been ask for database need to replace localhost for db.
 
