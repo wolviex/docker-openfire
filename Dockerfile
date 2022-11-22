@@ -1,7 +1,7 @@
 #name of container: docker-openfire
 #versison of container: 0.3.3
-FROM quantumobject/docker-baseimage:18.04
-MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
+FROM FROM phusion/baseimage:latest
+
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
