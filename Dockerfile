@@ -1,6 +1,6 @@
 #name of container: docker-openfire
 #versison of container: 0.3.3
-FROM phusion/baseimage:latest
+FROM phusion/baseimage:jammy-1.0.1
 
 
 #add repository and update the container
