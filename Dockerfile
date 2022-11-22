@@ -1,11 +1,10 @@
-#name of container: docker-openfire
-#versison of container: 0.3.3
-FROM quantumobject/docker-baseimage:18.04
-MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
+FROM phusion/baseimage:jammy-1.0.1
+
+LABEL version="1.0.1"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends openjdk-8-jdk \
+RUN apt-get update && apt-get install wget && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends openjdk-8-jdk \
                     && apt-get clean \
                     && apt-get autoremove \
                     && rm -rf /tmp/* /var/tmp/*  \
