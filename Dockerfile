@@ -4,7 +4,7 @@ LABEL version="1.0.1"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends openjdk-8-jdk \
+RUN apt-get update && apt-get install wget && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends openjdk-8-jdk \
                     && apt-get clean \
                     && apt-get autoremove \
                     && rm -rf /tmp/* /var/tmp/*  \
