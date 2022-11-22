@@ -1,7 +1,7 @@
 #name of container: docker-openfire
 #versison of container: 0.3.3
 FROM phusion/baseimage:jammy-1.0.1
-
+#no maintainer line
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
